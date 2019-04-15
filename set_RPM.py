@@ -9,7 +9,7 @@ import pigpio
 freq=5000
 GPIO=18
 # pwm example , if you want 10% then set pwm=100000, 90%=900000
-pwm=900000
+pwm=300000
 
 # TODO
 # Limit max PWM to 90% to save the motor

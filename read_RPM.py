@@ -103,6 +103,7 @@ if __name__ == "__main__":
    import time
    import pigpio
    import read_RPM
+   import datetime
 
    RPM_GPIO = 3
    RUN_TIME = 60.0
@@ -120,7 +121,7 @@ if __name__ == "__main__":
 
       RPM = p.RPM()
      
-      print("RPM={}".format(int(RPM+0.5)))
+      print("{:%Y-%m-%d %H:%M:%S} {}".format(datetime.datetime.now(),int(RPM+0.5)))
 
    p.cancel()
 
