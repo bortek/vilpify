@@ -106,7 +106,7 @@ if __name__ == "__main__":
    import datetime
 
    RPM_GPIO = 3
-   RUN_TIME = 60.0
+   RUN_TIME = 1.0
    SAMPLE_TIME = 2.0
 
    pi = pigpio.pi()
@@ -116,7 +116,7 @@ if __name__ == "__main__":
    start = time.time()
 
    while (time.time() - start) < RUN_TIME:
-
+      # Check if we need to create a warmloop or if the first printed value is correct
       time.sleep(SAMPLE_TIME)
 
       RPM = p.RPM()
